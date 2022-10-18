@@ -19,7 +19,7 @@ func upTablePaymentBin(tx *sql.Tx) error {
 	);
 	`
 
-	_, err := tx.Query(query)
+	_, err := tx.Exec(query)
 	if err != nil {
 		log.Println(err.Error())
 		return err
